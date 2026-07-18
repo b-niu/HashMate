@@ -1,0 +1,13 @@
+{
+  // 保存时自动格式化，并用 ruff 作为 Python 默认格式化器
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.ruff": "explicit",
+      "source.organizeImports.ruff": "explicit"
+    }
+  },
+  // 使用工作区内 uv 安装的 ruff（保证与 CI/命令行版本一致）
+  "ruff.importStrategy": "fromEnvironment"
+}
